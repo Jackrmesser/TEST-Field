@@ -9,6 +9,51 @@
         <link rel="apple-touch-icon" href="icon/icon.png">
         <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
         <title>Blockade - Press Go To Start</title>
+
+        <style>
+            #GameCanvas {
+                margin-bottom: 100px; /* Leave space for the digital keyboard */
+            }
+
+            #digitalKeyboard button {
+                background: #555;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                text-align: center;
+                width: 60px;
+                height: 60px;
+            }
+
+            #digitalKeyboard button:active {
+                background: #777;
+            }
+
+            #digitalKeyboard {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: #333;
+                display: flex;
+                justify-content: space-around;
+                padding: 10px;
+                z-index: 1000;
+            }
+
+            .arrow-column {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .arrow-column button {
+                width: 60px;
+                height: 60px;
+            }
+        </style>
+
     </head>
     <body style="background-color: black">
         <script type="text/javascript" src="js/libs/pixi.js"></script>
@@ -25,5 +70,33 @@
         <script type="text/javascript" src="js/rpg_windows.js"></script>
         <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+
+        <!-- Digital Keyboard Script -->
+        <script>
+            document.getElementById('digitalKeyboard').addEventListener('click', function(event) {
+                if (event.target.tagName === 'BUTTON') {
+                    const key = event.target.getAttribute('data-key');
+                    if (key) {
+                        // Create a simulated key press event
+                        const simulatedEvent = new KeyboardEvent('keydown', { key: key });
+                        window.dispatchEvent(simulatedEvent);
+                    }
+                }
+            });
+        </script>
+
+        <!-- Digital Keyboard Layout -->
+        <div id="digitalKeyboard">
+            <!-- Arrow Keys -->
+            <button data-key="ArrowUp">▲</button>
+            <div class="arrow-column">
+                <button data-key="ArrowLeft">◀</button>
+                <button data-key="ArrowDown">▼</button>
+                <button data-key="ArrowRight">▶</button>
+            </div>
+            <!-- Other Keys -->
+            <button data-key="Enter">Enter</button>
+            <button data-key="Escape">Esc</button>
+        </div>
     </body>
 </html>
