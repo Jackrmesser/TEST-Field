@@ -19,4 +19,4 @@ window.onload = function() {
             canvas.msRequestFullscreen(); // For older Edge/IE
         }
     }, { once: true }); // Ensure it runs only on the first interaction
-};
+}
