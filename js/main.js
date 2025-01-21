@@ -5,9 +5,7 @@
 PluginManager.setup($plugins);
 
 window.onload = function() {
-    SceneManager.run(Scene_Boot);
-
-window.onload = function() {
+    // Run the initial scene
     SceneManager.run(Scene_Boot);
 
     // Trigger fullscreen on first touch (mobile-specific)
