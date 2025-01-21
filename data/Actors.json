@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"battlerName":"Actor1_2","characterIndex":1,"characterName":"Actor1","classId":1,"equips":[1,0,2,3,4],"faceIndex":0,"faceName":"Actor1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Luke","nickname":"Lead Bass","note":"","profile":""},
+{"id":2,"battlerName":"Actor1_5","characterIndex":4,"characterName":"Actor1","classId":2,"equips":[2,0,2,3,4],"faceIndex":4,"faceName":"Actor1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Jack R","nickname":"'Sting'","note":"","profile":""},
+{"id":3,"battlerName":"Actor1_7","characterIndex":6,"characterName":"Actor1","classId":3,"equips":[3,0,2,3,4],"faceIndex":2,"faceName":"People1","traits":[],"initialLevel":1,"maxLevel":99,"name":"Olly","nickname":"Ooo Running","note":"","profile":""},
+{"id":4,"battlerName":"Actor2_1","characterIndex":0,"characterName":"Actor2","classId":4,"equips":[4,0,2,3,4],"faceIndex":0,"faceName":"Actor2","traits":[],"initialLevel":1,"maxLevel":99,"name":"Jack M","nickname":"Messer","note":"","profile":""}
+]
